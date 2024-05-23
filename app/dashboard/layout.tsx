@@ -1,4 +1,4 @@
-import Sidebar from "@/app/components/Sidebar";
+import Sidebar from "../components/sideBar/Sidebar";
 
 export default function DashboardLayout({
   children,
@@ -7,17 +7,11 @@ export default function DashboardLayout({
 }>) {
   return (
     <div className="bg-slate-100 overflow-y-scroll w-screen h-screen antialiased text-slate-300 selection:bg-blue-600 selection:text-white">
-        <div className="flex">
+      <div className="flex">
+        <Sidebar />
 
-            <Sidebar/>
-
-            <div className="w-full p-2 text-slate-900">
-                {children}      
-            </div>
-
-            
-          
-        </div>
+        <div className="w-full p-2 text-slate-900">{children}</div>
+      </div>
     </div>
   );
 }

@@ -1,14 +1,17 @@
-import { SimpleWidget } from "@/app/components/SimpleWidget";
-import { NextPage } from "next";
+import { WidgetsGrid } from "@/app/components/WidgesGrid";
 
-interface Props {}
-
-const Page: NextPage<Props> = ({}) => {
-  return (
-    <div>
-      <SimpleWidget />
-    </div>
-  );
+export const metadata = {
+  title: "Admin Dashboard",
+  description: "SEO Title",
 };
 
-export default Page;
+export default function MainPage() {
+  return (
+    <div className="text-black p-2">
+      <h1 className="mt-2 text-3xl">Dashboard</h1>
+      <span className="text-xl">Información general</span>
+
+      <WidgetsGrid />
+    </div>
+  );
+}
